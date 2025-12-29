@@ -1,11 +1,11 @@
-// Selection sort :
+// Selection sort : (Selection first , Swapping second)
 
 #include<iostream>
 using namespace std;
 
 int ssort(int arr[], int size)
 {
-    for(int i = size -1; i >= 0; i --)
+    for(int i = size -1; i > 0; i --)
     {
         int index = 0;
         int large = arr[index];
@@ -17,11 +17,14 @@ int ssort(int arr[], int size)
                 large = arr[index];
             }
 
-                int t = arr[index];
-                arr[index] = arr[i];
-                arr[i] = t;
+                // int t = arr[index];
+                // arr[index] = arr[i];
+                // arr[i] = t;
             
         }
+
+        arr[index] = arr[i];
+        arr[i] = large;
     }
 
     for (int i = 0; i < size; i++)
